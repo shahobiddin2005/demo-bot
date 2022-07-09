@@ -1,5 +1,8 @@
-TLEGRAM_BOT_TOKEN = '5494635583:AAE2tEt_RHJKgMmHE7vpFT1h9TUFHfv0wn8';
 const TeleBot = require('telebot');
+
+require('dotenv').config();
+const TLEGRAM_BOT_TOKEN = process.env.TOKEN;
+
 const bot = new TeleBot(TLEGRAM_BOT_TOKEN);
 const chatIds = [];
 const CronJob = require('cron').CronJob;
